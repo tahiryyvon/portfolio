@@ -1,0 +1,30 @@
+.wrap {
+    max-width: 100%;
+  }
+  
+  .border-2-2 {
+    border-width: 2px;
+  }
+  
+  .right-timeline::before {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    right: -1.75rem;
+    top: 1.5rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #314455;
+    border-width: 0.625rem;
+    transform: rotate(180deg);
+  }
+  
+  .left-timeline::before {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    left: -1.75rem;
+    top: 1.5rem;
+    border-style: solid;
+    border-color: transparent #314455 transparent transparent;
+    border-width: 0.625rem;
+  }

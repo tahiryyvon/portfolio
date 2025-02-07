@@ -1,0 +1,65 @@
+<nav
+  [ngClass]="{ 'w-64': !isCollapsed, 'w-20': isCollapsed }"
+  class="bg-gray-900 text-white h-screen fixed top-0 left-0 transition-all duration-300 z-20 flex flex-col"
+>
+  <!-- Logo and Toggle Button -->
+  <div class="flex items-center justify-between p-4">
+    <img
+      src="assets/images/logo.png"
+      alt="Logo"
+      class="h-10 w-10 object-contain"
+    />
+    <button (click)="toggleSidebar()" class="text-white focus:outline-none">
+      <span class="material-icons">
+        {{ isCollapsed ? 'chevron_right' : 'chevron_left' }}
+      </span>
+    </button>
+  </div>
+  <!-- Navigation Links -->
+  <ul class="mt-8 flex-1">
+    <li class="mb-6">
+      <a
+        routerLink="/"
+        class="flex items-center px-4 py-2 hover:bg-gray-700"
+        routerLinkActive="bg-gray-700"
+        (click)="isCollapsed = false"
+      >
+        <span class="material-icons mr-4">home</span>
+        <span *ngIf="!isCollapsed">Home</span>
+      </a>
+    </li>
+    <li class="mb-6">
+      <a
+        routerLink="/about"
+        class="flex items-center px-4 py-2 hover:bg-gray-700"
+        routerLinkActive="bg-gray-700"
+        (click)="isCollapsed = false"
+      >
+        <span class="material-icons mr-4">person</span>
+        <span *ngIf="!isCollapsed">About Me</span>
+      </a>
+    </li>
+    <li class="mb-6">
+      <a
+        routerLink="/projects"
+        class="flex items-center px-4 py-2 hover:bg-gray-700"
+        routerLinkActive="bg-gray-700"
+        (click)="isCollapsed = false"
+      >
+        <span class="material-icons mr-4">work</span>
+        <span *ngIf="!isCollapsed">Projects</span>
+      </a>
+    </li>
+    <li class="mb-6">
+      <a
+        routerLink="/contact"
+        class="flex items-center px-4 py-2 hover:bg-gray-700"
+        routerLinkActive="bg-gray-700"
+        (click)="isCollapsed = false"
+      >
+        <span class="material-icons mr-4">mail</span>
+        <span *ngIf="!isCollapsed">Contact</span>
+      </a>
+    </li>
+  </ul>
+</nav>

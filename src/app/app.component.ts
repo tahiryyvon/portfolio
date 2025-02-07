@@ -1,35 +1,23 @@
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import * as AOS from 'aos';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { Component } from '@angular/core';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { fadeAnimation } from './animations';
+import { SidebarStateService } from './services/sidebar-state.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterModule,
-    NavbarComponent,
-    FooterComponent,
-    // Include any other modules or components needed
-  ],
-  template: `
-    <app-navbar></app-navbar>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-  `,
+  imports: [CommonModule, RouterOutlet, SidebarComponent],
+  templateUrl: './app.component.html',
+  animations: [fadeAnimation],
 })
+export class AppComponent {
+  isCollapsed = false;
 
-export class AppComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-
-  ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      AOS.init({
-        duration: 800,
-        once: true,
-      });
-    }
+  constructor(private sidebarState: SidebarStateService) {
+    this.sidebarState.isCollapsed.subscribe(
+      (state) => (this.isCollapsed = state)
+    );
   }
 }

@@ -1,17 +1,25 @@
-// main.ts
-import { enableProdMode } from '@angular/core';
+import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
+import { AppComponent } from './app/app.component';
 import { routes } from './app/app.routes';
-import { importProvidersFrom } from '@angular/core';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideHttpClient } from '@angular/common/http'; // For HTTP requests if needed
+import { SidebarStateService } from './app/services/sidebar-state.service';
 
-// Import global styles (if any)
-import './styles.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+  duration: 800,
+  once: true,
+});
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
-    // ...other global providers...
+    provideAnimations(),
+    provideHttpClient(),
+    SidebarStateService,
   ],
-}).catch((err) => console.error(err));
+}).catch(err => console.error(err));

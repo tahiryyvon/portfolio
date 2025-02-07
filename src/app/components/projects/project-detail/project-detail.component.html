@@ -1,0 +1,16 @@
+<div class="p-6">
+    <h2 class="text-2xl font-bold mb-4">{{ data.title }}</h2>
+    <img
+      [src]="data.image"
+      [alt]="data.title"
+      class="w-full h-64 object-cover mb-4"
+    />
+    <p>{{ data.details }}</p>
+    <button
+      mat-button
+      class="mt-4"
+      (click)="close()"
+    >
+      Close
+    </button>
+  </div>
