@@ -1,0 +1,38 @@
+[
+    {
+      "position": "Fullstack Lucee Developer",
+      "company": "Ed-Admin",
+      "location": "Australia (Remote)",
+      "startDate": "August 2023",
+      "endDate": "October 2024",
+      "description": "Ed-Admin specializes in the creation and maintenance of school management applications. As a Fullstack Lucee Developer, I provided maintenance and developed new features for the school management application as well as for the company's internal staff management application.",
+      "side": "right"
+    },
+    {
+      "position": "Senior Web Developer",
+      "company": "Studio Edna",
+      "location": "Antananarivo",
+      "startDate": "July 2022",
+      "endDate": "July 2023",
+      "description": "Studio Edna specializes in 3D activities, especially in real estate. As a Senior Web Developer, I improved virtual tours using interactive images and videos, participated in the modification and enhancement of the interactive 3D model, and created the engine for a more advanced virtual tour. Virtual tours and interactive 3D models have already been sold to several clients, with a more realistic virtual tour under development, leading to more effective real estate sales.",
+      "side": "left"
+    },
+    {
+      "position": "Senior Web Developer",
+      "company": "W-3D",
+      "location": "Antananarivo",
+      "startDate": "September 2018",
+      "endDate": "June 2022",
+      "description": "W-3D specializes in 2D, 3D, and video games. As a Senior Web Developer, I participated in the creation of interactive 3D models, developed virtual tours, and created the apartment search module and back-office. I also participated in team management and task distribution. Our efforts led to more effective real estate sales for clients, with virtual tours and 3D models sold to several clients, including those outside France such as Dubai, expanding the company's scope.",
+      "side": "right"
+    },
+    {
+      "position": "Full Stack ColdFusion Web Developer",
+      "company": "Hayrama Technology",
+      "location": "Antananarivo",
+      "startDate": "July 2015",
+      "endDate": "February 2018",
+      "description": "Hayrama Technology is a company offering services in the web domain. As a Full Stack Web Developer, I improved online library management applications, optimized an IT equipment sales platform, modified website responsiveness, and integrated application APIs with client sites. These improvements made it easier to search for books in libraries, created more organized equipment sales sites, and attracted several clients for converting websites to responsive designs.",
+      "side": "left"
+    }
+  ]

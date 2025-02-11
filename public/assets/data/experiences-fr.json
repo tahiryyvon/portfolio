@@ -1,0 +1,38 @@
+[
+    {
+      "position": "Développeur Lucee Fullstack",
+      "company": "Ed-Admin",
+      "location": "Australie (Remote)",
+      "startDate": "Août 2023",
+      "endDate": "Octobre 2024",
+      "description": "Ed-Admin est spécialisé dans la création et la maintenance d’applications de gestion d’école. En tant que Développeur Fullstack Lucee, j'ai assuré la maintenance et la création de nouvelles fonctionnalités pour l’application de gestion d’école ainsi que pour l’application interne de gestion du personnel de l’entreprise.",
+      "side": "right"
+    },
+    {
+      "position": "Senior Développeur Web",
+      "company": "Studio Edna",
+      "location": "Antananarivo",
+      "startDate": "Juillet 2022",
+      "endDate": "Juillet 2023",
+      "description": "Le Studio Edna est spécialisé dans l’activité 3D, notamment dans l’immobilier. En tant que Senior Développeur Web, j'ai amélioré la visite virtuelle à partir d’images et de vidéos interactives, participé à la modification et à l’amélioration de la maquette 3D interactive, et créé le moteur pour une visite virtuelle plus avancée. Les visites virtuelles et maquettes 3D interactives ont déjà été vendues à plusieurs clients, avec une version plus réaliste en cours de développement, contribuant à une vente plus efficace des biens immobiliers.",
+      "side": "left"
+    },
+    {
+      "position": "Senior Développeur Web",
+      "company": "W-3D",
+      "location": "Antananarivo",
+      "startDate": "Septembre 2018",
+      "endDate": "Juin 2022",
+      "description": "W-3D est spécialisé dans l’activité du 2D, 3D et les jeux vidéo. En tant que Senior Développeur Web, j'ai participé à la création de maquettes 3D interactives, à la création de visites virtuelles, et à la mise en place d'un module de recherche d’appartements et de back-office. J'ai également contribué à la gestion d’équipe et à la répartition des tâches. Ces efforts ont conduit à une vente plus efficace de biens immobiliers pour les clients, avec des visites virtuelles et maquettes 3D vendues à plusieurs clients, y compris des clients internationaux tels que Dubaï, élargissant ainsi le champ d’activité de l’entreprise.",
+      "side": "right"
+    },
+    {
+      "position": "Développeur Web Full Stack Coldfusion",
+      "company": "Hayrama Technology",
+      "location": "Antananarivo",
+      "startDate": "Juillet 2015",
+      "endDate": "Février 2018",
+      "description": "Hayrama Technology est une entreprise proposant des services dans le domaine du Web. En tant que Développeur Web Full Stack, j'ai amélioré des applications de gestion de bibliothèque en ligne, optimisé une plateforme de vente de matériels informatiques, modifié la responsivité de sites web, et assuré la liaison d’API d’applications au site du client. Ces améliorations ont facilité la recherche d’ouvrages pour les bibliothèques, rendu les sites de vente de matériels plus organisés, et attiré plusieurs clients pour la conversion de sites web responsives.",
+      "side": "left"
+    }
+  ]

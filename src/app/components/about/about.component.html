@@ -1,53 +1,86 @@
-<div class="container mx-auto py-16 px-4">
-  <div class="text-center mb-8" data-aos="fade-down">
-    <img
-      src="assets/images/me.png"
-      alt="Your Name"
-      class="w-40 h-40 rounded-full mx-auto mb-4"
-    />
-    <h2 class="text-3xl font-bold">About Me</h2>
-    <p class="text-lg mt-4">
-      <!-- Brief introduction about yourself -->
-      I'm a software developer with a passion for creating innovative solutions.
-    </p>
-  </div>
-  <!-- Timeline -->
-  <div class="relative wrap overflow-hidden p-10 h-full">
-    <div
-      class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2 transform -translate-x-1/2"
-    ></div>
-    <!-- Experience Item 1 -->
-    <div
-      class="mb-8 flex justify-between items-center w-full right-timeline"
-      data-aos="fade-right"
-    >
-      <div class="order-1 w-5/12"></div>
-      <div
-        class="order-1 w-5/12 px-1 py-4 text-right"
-      >
-        <h4 class="mb-1 text-xl font-bold">Position Title</h4>
-        <p class="text-gray-700">Company Name, Year - Year</p>
-        <p class="mt-2 text-gray-600">
-          Description of your role and achievements.
-        </p>
-      </div>
+<!-- about.component.html -->
+
+<div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-16 px-4">
+  <div class="container mx-auto">
+    <div class="text-center mb-8" data-aos="fade-down">
+      <img
+        src="assets/images/me.png"
+        alt="Tahiry Yvon Rabarisoa"
+        class="w-50 h-60 rounded-full mx-auto mb-4 border-4 border-yellow-300"
+      />
+      <h2 class="text-4xl font-bold text-yellow-300">About Me</h2>
+      <p class="text-lg mt-4 text-white" data-aos="fade-up">
+        Senior Web Developer with over 9 years of expertise in developing robust and innovative web solutions. Since 2015, I have worked with a variety of technologies, including ColdFusion, Lucee, Angular, and PHP.
+        <br><br>
+        My quality and innovation-focused approach allows me to deliver solutions tailored to the specific needs of clients and to quickly adapt to technological changes.
+        <br><br>
+        Passionate about web development, I am always seeking new opportunities to tackle challenging projects and contribute to the success of ambitious web initiatives.
+      </p>
     </div>
-    <!-- Experience Item 2 -->
-    <div
-      class="mb-8 flex justify-between items-center w-full left-timeline"
-      data-aos="fade-left"
-    >
+
+    <!-- Timeline -->
+    <div class="relative wrap overflow-hidden py-10 h-full">
+      <!-- Center vertical line -->
       <div
-        class="order-1 w-5/12 px-1 py-4 text-left"
-      >
-        <h4 class="mb-1 text-xl font-bold">Position Title</h4>
-        <p class="text-gray-700">Company Name, Year - Year</p>
-        <p class="mt-2 text-gray-600">
-          Description of your role and achievements.
-        </p>
-      </div>
-      <div class="order-1 w-5/12"></div>
+        class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-200"
+      ></div>
+
+      <!-- Experiences Loop -->
+      <ng-container *ngFor="let exp of experiences; let i = index">
+        <div
+          class="mb-8 flex justify-between items-center w-full"
+          data-aos="fade-up"
+          [attr.data-aos-delay]="i * 100"
+        >
+          <!-- Left Side Content -->
+          <div
+            class="order-1 w-5/12 hidden md:block"
+            [ngClass]="{
+              'md:order-1': i % 2 === 0,
+              'md:order-2': i % 2 !== 0
+            }"
+          >
+            <div *ngIf="i % 2 === 0" class="bg-white text-gray-800 rounded-lg shadow-lg p-6">
+              <h4 class="text-xl font-bold mb-1">{{ exp.position }}</h4>
+              <p class="text-gray-700">{{ exp.company }}, {{ exp.location }}</p>
+              <p class="text-sm text-gray-600">{{ exp.startDate }} - {{ exp.endDate }}</p>
+              <p class="mt-2 text-gray-600">{{ exp.description }}</p>
+            </div>
+          </div>
+
+          <!-- Center Circle -->
+          <div class="z-10 order-2 flex-none w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white mx-4">
+            {{ i + 1 }}
+          </div>
+
+          <!-- Right Side Content -->
+          <div
+            class="order-3 w-5/12 hidden md:block"
+            [ngClass]="{
+              'md:order-3': i % 2 === 0,
+              'md:order-4': i % 2 !== 0
+            }"
+          >
+            <div *ngIf="i % 2 !== 0" class="bg-white text-gray-800 rounded-lg shadow-lg p-6">
+              <h4 class="text-xl font-bold mb-1">{{ exp.position }}</h4>
+              <p class="text-gray-700">{{ exp.company }}, {{ exp.location }}</p>
+              <p class="text-sm text-gray-600">{{ exp.startDate }} - {{ exp.endDate }}</p>
+              <p class="mt-2 text-gray-600">{{ exp.description }}</p>
+            </div>
+          </div>
+
+          <!-- Mobile View: Stacked Content -->
+          <div class="w-full md:hidden mt-4">
+            <div class="bg-white text-gray-800 rounded-lg shadow-lg p-6">
+              <h4 class="text-xl font-bold mb-1">{{ exp.position }}</h4>
+              <p class="text-gray-700">{{ exp.company }}, {{ exp.location }}</p>
+              <p class="text-sm text-gray-600">{{ exp.startDate }} - {{ exp.endDate }}</p>
+              <p class="mt-2 text-gray-600">{{ exp.description }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
     </div>
-    <!-- Continue adding experience items -->
+
   </div>
 </div>
